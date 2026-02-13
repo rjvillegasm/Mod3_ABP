@@ -1,6 +1,6 @@
 
 import time
-from modulos import menu, operaciones_inventario
+from modulos import menu, operaciones_inventario, validaciones
 
 #función main para controlar el flujo del programa
 def main():
@@ -10,28 +10,43 @@ def main():
         opcion = menu.seleccionar_opcion()
         
         if opcion=="1":
-            operaciones_inventario.agregar_producto()
-            pass
+            new_id = input("Ingrese un id: ")
+            new_nombre = input("Ingrese nombre del producto: ")
+            new_precio = input("Ingrese el precio: ")
+            new_cantidad= input("Ingrese la cantidad en unidades: ")
+            categoria= input(" Ingrese una de las sgts categorías:\n Abarrotes, Higiene, Bebidas, Lácteos, Bebidas, Limpieza): ")
+            
+            operaciones_inventario.agregar_producto(new_id, new_nombre, new_precio, new_cantidad, categoria)
+            
         
         elif opcion=="2":
-            operaciones_inventario.eliminar_producto()
-            pass
+            id_eliminar = input("Ingrese un id a eliminar: ")
+            nombre_eliminar = input("Ingrese nombre del producto a: ")
+            operaciones_inventario.eliminar_producto(id_eliminar, nombre_eliminar)
+            
         
         elif opcion=="3":
-            operaciones_inventario.modificar_producto()
-            pass
+            id = input("Ingrese un id para seleccionar el producto ")
+            new_nombre = input("Ingrese nuevo nombre del producto: ")
+            new_precio = input("Ingrese el nuevo precio: ")
+            new_cantidad= input("Ingrese la nueva cantidad en unidades: ")
+            categoria= input(" Ingrese una de las sgts categorías:\n Abarrotes, Higiene, Bebidas, Lácteos, Bebidas, Limpieza): ")
+
+            operaciones_inventario.modificar_producto(id,new_nombre,new_precio, new_cantidad, categoria )
+            
         
         elif opcion=="4":
-            operaciones_inventario.buscar_producto()
-            pass
+            nombre_buscar = input("Ingrese nombre del producto buscado: ")
+            operaciones_inventario.buscar_producto(nombre_buscar)
+            
         
         elif opcion=="5":
             operaciones_inventario.mostrar_inventario()
-            pass
+            
         
         elif opcion=="6":
             operaciones_inventario.calcular_valor_inventario()
-            pass
+            
 
         elif opcion=="7":
             print("¡Gracias por usar el sistema de gestión de inventario!")
