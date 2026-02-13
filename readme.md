@@ -1,14 +1,17 @@
 
-Proyecto del módulo 3
+# Proyecto del módulo 3
 
-Sistema de gestión de inventario en consola
+## Sistema de gestión de inventario en consola
 
 
-Estructura:
+## Estructura:
 -----------
 main.py: Punto de entrada del programa
+
 menu.py: Gestión del menú principal
-operaciones_inventario.py: Operaciones del inventario y manejo de productos (CRUD)
+
+operaciones_inventario.py: Operaciones del inventario y manejo de productos(CRUD)
+
 validaciones.py: Realiza validaciones utilizadas en operaciones_inventario
 -----------
 
