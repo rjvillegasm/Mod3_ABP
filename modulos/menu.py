@@ -6,7 +6,7 @@ def mostrar_menu():
     print("Opciones disponibles:")
     print("1. Agregar nuevo producto")
     print("2. Eliminar producto")
-    print("3.Modificar producto")
+    print("3. Modificar producto")
     print("4. Buscar producto")
     print("5. Mostrar inventario completo")
     print("6. Calcular valor total del inventario")
