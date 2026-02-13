@@ -1,4 +1,4 @@
-import operaciones_inventario
+from . import operaciones_inventario
 #funciónes para verficar si existe un producto antes de realizar las operaciones
 #Utilizada por las demás funcionalidades pero no es un feature principal 
 
