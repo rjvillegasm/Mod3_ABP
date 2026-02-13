@@ -16,7 +16,7 @@ El menú principal cuenta con las siguientes opciones:
 -----------
 1. Agregar nuevo producto
 2. Eliminar producto
-3. Buscar producto
+3. Buscar producto por nombre
 4. Modificar producto
 5. Mostrar inventario completo
 6. Calcular valor total del inventario
