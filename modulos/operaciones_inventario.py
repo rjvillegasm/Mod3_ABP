@@ -1,5 +1,5 @@
 
-import validaciones
+from modulos import validaciones
 
 # Estructuras de datos: 
 # 
@@ -89,7 +89,7 @@ def agregar_producto(id, nombre, precio, cantidad, categoria):
             inventario[id]= new_producto
             ids_utilizados.add(id)  
         else:
-            print("Categoría no existente")
+            print("Categoría no existente, intente nuevamente.")
         
 
 #función para eliminar un producto
@@ -110,7 +110,7 @@ def modificar_producto(id,nombre, precio, cantidad,categoria):
             inventario[id]["precio"]=precio
             inventario[id]["cantidad"]=cantidad
             inventario[id]["categoria"]=categoria
-            print(f"El producto modificado ha sido registrado como nombre: {nombre},precio: {precio}, cantidad: {cantidad}, categoría {categoria} ")
+            print(f"El producto modificado ha sido registrado como; nombre: {nombre}, precio: {precio}, cantidad: {cantidad}, categoría: {categoria} ")
         else:
             print("La categoría debe pertenecer a las pre-existentes")
     else:
@@ -120,6 +120,7 @@ def modificar_producto(id,nombre, precio, cantidad,categoria):
 def buscar_producto(nombre):
     for codigo, producto in inventario.items():
         if nombre.lower()==producto["nombre"].lower():
+            print("--------------")
             print(f"Código: {codigo}")
             print(f"Nombre: {producto['nombre']}")
             print(f"Cantidad: {producto['cantidad']}")
@@ -132,6 +133,7 @@ def buscar_producto(nombre):
 
 #función para mostrar el inventario
 def mostrar_inventario():
+    print("\n")
     for codigo, producto in inventario.items():
         print(f"{codigo}: {producto}")
 
