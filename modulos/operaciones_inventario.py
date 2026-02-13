@@ -78,7 +78,7 @@ categorias=("Abarrotes", "Higiene", "Bebidas", "Lácteos", "Bebidas", "Limpieza"
 #función para agregar un producto
 def agregar_producto(id, nombre, precio, cantidad, categoria):  
     if validaciones.verificar_producto(id, nombre):
-        print("ID o nombre ya utilizados")
+        print("\nID o nombre ya utilizados")
     else:
         if validaciones.verificar_categoria(categoria):
             new_producto={ "nombre": nombre,
@@ -89,17 +89,17 @@ def agregar_producto(id, nombre, precio, cantidad, categoria):
             inventario[id]= new_producto
             ids_utilizados.add(id)  
         else:
-            print("Categoría no existente, intente nuevamente.")
+            print("\nCategoría no existente, intente nuevamente.")
         
 
 #función para eliminar un producto
 def eliminar_producto(id, nombre):
     if validaciones.verificar_producto(id, nombre):
         producto_eliminado= inventario.pop(id,None)
-        print(f"Se ha eliminado: {producto_eliminado}")
+        print(f"\nSe ha eliminado: {producto_eliminado}")
         ids_utilizados.remove(id)
     else:
-        print("Producto ó ID incorrectos")
+        print("\nProducto ó ID incorrectos")
         
 #función para modificar un producto existente
 # el ID no puede ser modificado, en caso de error se debe borrar el producto y volver a ingresar
@@ -110,11 +110,11 @@ def modificar_producto(id,nombre, precio, cantidad,categoria):
             inventario[id]["precio"]=precio
             inventario[id]["cantidad"]=cantidad
             inventario[id]["categoria"]=categoria
-            print(f"El producto modificado ha sido registrado como; nombre: {nombre}, precio: {precio}, cantidad: {cantidad}, categoría: {categoria} ")
+            print(f"\nEl producto modificado ha sido registrado como; nombre: {nombre}, precio: {precio}, cantidad: {cantidad}, categoría: {categoria} ")
         else:
-            print("La categoría debe pertenecer a las pre-existentes")
+            print("\nLa categoría debe pertenecer a las pre-existentes")
     else:
-        print("Producto ó ID incorrectos")
+        print("\nProducto ó ID incorrectos")
   
 #función para buscar un producto
 def buscar_producto(nombre):
@@ -127,7 +127,7 @@ def buscar_producto(nombre):
             print(f"Precio: {producto['precio']}")
             print(f"Categoría: {producto['categoria']}")
             return
-    print("Nombre del producto no encontrado")
+    print("\n Nombre del producto no encontrado")
         
     
 
@@ -143,5 +143,5 @@ def calcular_valor_inventario():
     for producto in inventario.values():
         total += producto["precio"]*producto["cantidad"]
     
-    print(f" El valor del inventario es: {total} pesos")
+    print(f" \n El valor del inventario es: {total} pesos")
 

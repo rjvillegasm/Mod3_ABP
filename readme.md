@@ -6,10 +6,10 @@ Sistema de gestión de inventario en consola
 
 Estructura:
 -----------
-main.py                          # Punto de entrada del programa
-menu.py                          # Gestión del menú principal
-operaciones_inventario.py        # Operaciones del inventario y manejo de productos (CRUD)
-validaciones.py                  # Realiza validaciones utilizadas en operaciones_inventario
+main.py: Punto de entrada del programa
+menu.py: Gestión del menú principal
+operaciones_inventario.py: Operaciones del inventario y manejo de productos (CRUD)
+validaciones.py: Realiza validaciones utilizadas en operaciones_inventario
 -----------
 
 El menú principal cuenta con las siguientes opciones:
